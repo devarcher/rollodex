@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-import Collapsible from "./Collapsible";
 
 class HumanCard extends React.Component {
   state = {
@@ -30,13 +29,13 @@ class HumanCard extends React.Component {
                 {humanClones.firstName} {humanClones.lastName}
               </h1>
             </div>
-            <div>
               <button className="revealButton" onClick={this.isExpandedToggle}>
                 {isExpanded
                   ? "Hide Details"
                   : humanClones.firstName + " Details"}
               </button>
-            </div>
+            
+            
             <div className={isExpanded ? "" : "isNotExpanded"}>
               <div className="detailsLeft">
                 <p>Email: {humanClones.email}</p>

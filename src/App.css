@@ -1,3 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background: rgba(225, 202, 225, 1);
+}
+
+/* $color1: rgba(152, 179, 166, 1);
+$color2: rgba(137, 206, 204, 1);
+$color3: rgba(165, 172, 218, 1);
+$color4: rgba(225, 202, 225, 1);
+$color5: rgba(236, 185, 205, 1); */
+
+.card {
+  width: 30vw;
+  margin: 35px auto;
+}
+
+.card-body {
+  background:rgba(152, 179, 166, 1);
+  display:flex;
+  flex-direction: column;
+}
+
+.basicInfo {
+  display: flex;
+  padding: 1em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.revealButton {
+  align-self: flex-end;
+}
+
+
 .isNotExpanded {
   display: none;
 }
