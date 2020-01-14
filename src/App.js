@@ -1,9 +1,12 @@
 import React from "react";
+import HumanGroup from "./components/HumanGroup";
+
 import "./App.css";
 
 class App extends React.Component {
   state = {
-    humans: []
+    humans: [],
+    isLoading: true
   };
 
   componentDidMount() {
@@ -15,7 +18,22 @@ class App extends React.Component {
       const url = "https://randomuser.me/api?results=25";
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data);
+      // console.log(data.results)
+      const humanData = data.results.map(human => ({
+        firstName: human.name.first,
+        lastName: human.name.last,
+        email: human.email,
+        phone: human.phone,
+        streetName: human.location.street.name,
+        streetNumber: human.location.street.number,
+        postCode: human.location.postcode,
+        city: human.location.city,
+        state: human.location.state,
+        country: human.location.country,
+        dob: human.dob.date,
+        picture: human.picture.thumbnail
+      }))
+      this.setState({ humans: humanData, isLoading: false })
     } catch (err) {
       console.log(err);
     }
@@ -24,7 +42,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        hi
+        {this.state.loading || !this.state.humans ? (
+          <div>LOADING HUMANS...</div>
+        ) : (
+          <div>
+            <HumanGroup humanData={this.state.humans} />
+          </div>
+        )}
       </div>
     )
   }
