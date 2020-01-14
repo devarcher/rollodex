@@ -1,6 +1,14 @@
 import React from "react";
+import moment from "moment";
 
 class HumanCard extends React.Component {
+
+
+
+  
+
+
+
   render() {
     const { humanClones } = this.props;
     // console.log(humanClones);
@@ -9,24 +17,29 @@ class HumanCard extends React.Component {
         <div className="card">
           <div className="card-body">
             <div className="basicInfo">
-              <img src={humanClones.picture} className="pic" alt={humanClones.firstName}></img>
+              <img
+                src={humanClones.picture}
+                className="pic"
+                alt={humanClones.firstName}
+              ></img>
               <h1>
-                 {humanClones.firstName} {humanClones.lastName}
+                {humanClones.firstName} {humanClones.lastName}
               </h1>
+            </div>
+            <div>
+              <button className="revealButton" onClick={this.clickHandler}>{humanClones.firstName}'s Details</button>
             </div>
             <div className="details">
               <div className="detailsLeft">
-                <p>{humanClones.email}</p>
-                <p>{humanClones.phone}</p>
-                <p>{humanClones.dob}</p>
+                <p>Email: {humanClones.email}</p>
+                <p>Phone: {humanClones.phone}</p>
+                <p>Birthday: {moment(humanClones.dob).format("MMMM Do")}</p>
               </div>
               <div className="detailsRight">
-                <p>{humanClones.streetNumber}</p>
-                <p>{humanClones.streetName}</p>
-                <p>{humanClones.city}</p>
-                <p>{humanClones.state}</p>
-                <p>{humanClones.postalCode}</p>
-                <p>{humanClones.country}</p>
+                <p>Address: {humanClones.streetNumber} {humanClones.streetName}</p>
+                <p>City/State: {humanClones.city}, {humanClones.state}</p>
+                <p>Country: {humanClones.country}</p>
+                <p>Post Code: {humanClones.postCode}</p>
               </div>
             </div>
           </div>

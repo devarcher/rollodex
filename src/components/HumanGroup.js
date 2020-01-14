@@ -6,8 +6,8 @@ const HumanGroup = props => {
 
   const humanClones = humanData.slice();
   humanClones.sort(function(a, b) {
-    let nameA = a.lastName.toLowerCase(),
-      nameB = b.lastName.toLowerCase();
+    let nameA = a.lastName.toLowerCase();
+    let nameB = b.lastName.toLowerCase();
     if (nameA < nameB) {
       return -1;
     }
