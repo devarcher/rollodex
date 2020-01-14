@@ -25,17 +25,16 @@ class HumanCard extends React.Component {
                 className="pic"
                 alt={humanClones.firstName}
               ></img>
-              <h1>
-                {humanClones.firstName} {humanClones.lastName}
-              </h1>
+              <div className="textBlock">
+                <h1>
+                  {humanClones.firstName} {humanClones.lastName}
+                </h1>
+                <span className="revealButton" onClick={this.isExpandedToggle}>
+                  {isExpanded ? "Hide Details" : "Show Details"}
+                </span>
+              </div>
             </div>
-              <button className="revealButton" onClick={this.isExpandedToggle}>
-                {isExpanded
-                  ? "Hide Details"
-                  : humanClones.firstName + " Details"}
-              </button>
-            
-            
+
             <div className={isExpanded ? "" : "isNotExpanded"}>
               <div className="detailsLeft">
                 <p>Email: {humanClones.email}</p>
