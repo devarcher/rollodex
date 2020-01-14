@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +16,11 @@ $color3: rgba(165, 172, 218, 1);
 $color4: rgba(225, 202, 225, 1);
 $color5: rgba(236, 185, 205, 1); */
 
+
+
+
 .card {
-  width: 35vw;
+  width: 30vw;
   margin: 35px auto;
 }
 
@@ -30,16 +35,34 @@ $color5: rgba(236, 185, 205, 1); */
   padding: 1em;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
+}
+
+.textBlock {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  border-bottom: 5px solid rgba(236, 185, 205, 1);
 }
 
 .revealButton {
-  align-self: flex-end;
+  font-family: 'Lato', sans-serif;
+  padding: .5rem;
+  cursor: pointer;
 }
 
 .pic {
-  border: 3px solid rgba(165, 172, 218, 1);
+  margin-left: 1rem;
+  border: 3px solid rgba(236, 185, 205, 1);
   border-radius: 50%;
+}
+
+.details {
+  font-family: 'Lato', sans-serif;
 }
 
 .isNotExpanded {

@@ -35,7 +35,7 @@ class HumanCard extends React.Component {
               </div>
             </div>
 
-            <div className={isExpanded ? "" : "isNotExpanded"}>
+            <div className={isExpanded ? "" : "isNotExpanded details"}>
               <div className="detailsLeft">
                 <p>Email: {humanClones.email}</p>
                 <p>Phone: {humanClones.phone}</p>
