@@ -2,12 +2,10 @@
 
 // class Collapsible extends React.Component {
 
-
 //   render() {
-    
-//   }
 
+//   }
 
 // }
 
-// export default Collapsible; 
+// export default Collapsible;

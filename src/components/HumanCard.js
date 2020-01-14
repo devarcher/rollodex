@@ -2,21 +2,15 @@ import React from "react";
 import moment from "moment";
 import Collapsible from "./Collapsible";
 
-
 class HumanCard extends React.Component {
-
   state = {
     isExpanded: false
-  }
+  };
 
-  isExpandedToggle = (e) => {
+  isExpandedToggle = e => {
     e.preventDefault();
-
-    this.setState({ isExpanded: !this.state.isExpanded})
-  }  
-
-
-
+    this.setState({ isExpanded: !this.state.isExpanded });
+  };
 
   render() {
     const { humanClones } = this.props;
@@ -37,7 +31,11 @@ class HumanCard extends React.Component {
               </h1>
             </div>
             <div>
-              <button className="revealButton" onClick={this.isExpandedToggle}>{humanClones.firstName}'s Details</button>
+              <button className="revealButton" onClick={this.isExpandedToggle}>
+                {isExpanded
+                  ? "Hide Details"
+                  : humanClones.firstName + " Details"}
+              </button>
             </div>
             <div className={isExpanded ? "" : "isNotExpanded"}>
               <div className="detailsLeft">
@@ -46,8 +44,12 @@ class HumanCard extends React.Component {
                 <p>Birthday: {moment(humanClones.dob).format("MMMM Do")}</p>
               </div>
               <div className="detailsRight">
-                <p>Address: {humanClones.streetNumber} {humanClones.streetName}</p>
-                <p>City/State: {humanClones.city}, {humanClones.state}</p>
+                <p>
+                  Address: {humanClones.streetNumber} {humanClones.streetName}
+                </p>
+                <p>
+                  City/State: {humanClones.city}, {humanClones.state}
+                </p>
                 <p>Country: {humanClones.country}</p>
                 <p>Post Code: {humanClones.postCode}</p>
               </div>
