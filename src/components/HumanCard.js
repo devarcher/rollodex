@@ -1,16 +1,26 @@
 import React from "react";
 import moment from "moment";
+import Collapsible from "./Collapsible";
+
 
 class HumanCard extends React.Component {
 
+  state = {
+    isExpanded: false
+  }
 
+  isExpandedToggle = (e) => {
+    e.preventDefault();
 
-  
+    this.setState({ isExpanded: !this.state.isExpanded})
+  }  
+
 
 
 
   render() {
     const { humanClones } = this.props;
+    const { isExpanded } = this.state;
     // console.log(humanClones);
     return (
       <div>
@@ -27,9 +37,9 @@ class HumanCard extends React.Component {
               </h1>
             </div>
             <div>
-              <button className="revealButton" onClick={this.clickHandler}>{humanClones.firstName}'s Details</button>
+              <button className="revealButton" onClick={this.isExpandedToggle}>{humanClones.firstName}'s Details</button>
             </div>
-            <div className="details">
+            <div className={isExpanded ? "" : "isNotExpanded"}>
               <div className="detailsLeft">
                 <p>Email: {humanClones.email}</p>
                 <p>Phone: {humanClones.phone}</p>
