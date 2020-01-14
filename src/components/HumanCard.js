@@ -3,13 +3,13 @@ import React from "react";
 class HumanCard extends React.Component {
   render() {
     const { humanClones } = this.props;
-    console.log(humanClones);
+    // console.log(humanClones);
     return (
       <div>
         <div className="card">
           <div className="card-body">
             <div className="basicInfo">
-              <img src={humanClones.picture}></img>
+              <img src={humanClones.picture} className="pic" alt={humanClones.firstName}></img>
               <h1>
                  {humanClones.firstName} {humanClones.lastName}
               </h1>

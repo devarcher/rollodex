@@ -17,7 +17,7 @@ const HumanGroup = props => {
     return 0;
   });
 
-  console.log("***Sorted Humans***", humanClones);
+  // console.log("***Sorted Humans***", humanClones);
 
   return (
     <div>
