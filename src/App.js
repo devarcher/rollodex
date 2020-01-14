@@ -31,9 +31,9 @@ class App extends React.Component {
         state: human.location.state,
         country: human.location.country,
         dob: human.dob.date,
-        picture: human.picture.thumbnail
-      }))
-      this.setState({ humans: humanData, isLoading: false })
+        picture: human.picture.large
+      }));
+      this.setState({ humans: humanData, isLoading: false });
     } catch (err) {
       console.log(err);
     }
@@ -50,7 +50,7 @@ class App extends React.Component {
           </div>
         )}
       </div>
-    )
+    );
   }
 }
 
