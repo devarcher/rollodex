@@ -1,5 +1,8 @@
 import React from "react";
-import moment from "moment";
+// import moment from "moment";
+import Collapsible from "./Collapsible";
+import { CSSTransition } from "react-transition-group";
+import { TransitionGroup } from "react-transition-group";
 
 class HumanCard extends React.Component {
   state = {
@@ -34,24 +37,7 @@ class HumanCard extends React.Component {
                 </span>
               </div>
             </div>
-
-            <div className={isExpanded ? "" : "isNotExpanded details"}>
-              <div className="detailsLeft">
-                <p>Email: {humanClones.email}</p>
-                <p>Phone: {humanClones.phone}</p>
-                <p>Birthday: {moment(humanClones.dob).format("MMMM Do")}</p>
-              </div>
-              <div className="detailsRight">
-                <p>
-                  Address: {humanClones.streetNumber} {humanClones.streetName}
-                </p>
-                <p>
-                  City/State: {humanClones.city}, {humanClones.state}
-                </p>
-                <p>Country: {humanClones.country}</p>
-                <p>Post Code: {humanClones.postCode}</p>
-              </div>
-            </div>
+            <Collapsible humanClones={humanClones} isExpanded={isExpanded} />
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap");
 
 * {
   margin: 0;
@@ -10,17 +10,8 @@ body {
   background: rgba(225, 202, 225, 1);
 }
 
-/* $color1: rgba(152, 179, 166, 1);
-$color2: rgba(137, 206, 204, 1);
-$color3: rgba(165, 172, 218, 1);
-$color4: rgba(225, 202, 225, 1);
-$color5: rgba(236, 185, 205, 1); */
-
-
-
-
 .card {
-  width: 30vw;
+  width: 33vw;
   margin: 35px auto;
 }
 
@@ -45,26 +36,45 @@ $color5: rgba(236, 185, 205, 1); */
 }
 
 h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   border-bottom: 5px solid rgba(236, 185, 205, 1);
 }
 
 .revealButton {
-  font-family: 'Lato', sans-serif;
-  padding: .5rem;
+  font-family: "Lato", sans-serif;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
 .pic {
-  margin-left: 1rem;
+  margin-left: 2rem;
   border: 3px solid rgba(236, 185, 205, 1);
   border-radius: 50%;
 }
 
-.details {
-  font-family: 'Lato', sans-serif;
+.isNotExpanded {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .5s ease-in;
 }
 
-.isNotExpanded {
-  display: none;
+.details {
+  display: flex;
+  font-family: "Lato", sans-serif;
+  border-top: 1.5px solid rgb(220, 185, 236);
+  padding: 1rem;
+  max-height: 200px;
+  opacity: 1;
+  transition: max-height 1s cubic-bezier(.525, .66, .495,.5), opactiy .5s ease-in;
+}
+
+.detailsLeft {
+  width: 45%;
+  margin-left: 1rem;
+}
+
+.detailsRight {
+  width: 50%;
+  margin-left: .5rem;
 }
