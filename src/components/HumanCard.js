@@ -14,7 +14,7 @@ class HumanCard extends React.Component {
   render() {
     const { humanClones } = this.props;
     const { isExpanded } = this.state;
-    // console.log(humanClones);
+    console.log(humanClones);
     return (
       <div>
         <div className="card">
@@ -30,7 +30,7 @@ class HumanCard extends React.Component {
                   {humanClones.firstName} {humanClones.lastName}
                 </h1>
                 <span className="revealButton" onClick={this.isExpandedToggle}>
-                  {isExpanded ? "Hide Details" : "Show Details"}
+                  {isExpanded ? `Hide ${humanClones.firstName}'s Details` : `Show ${humanClones.firstName}'s Details`}
                 </span>
               </div>
             </div>
