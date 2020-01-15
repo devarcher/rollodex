@@ -7,7 +7,7 @@ class Collapsible extends React.Component {
     const { humanClones } = this.props;
     const { isExpanded } = this.props;
     return (
-      <div className={isExpanded ? "details" : "isNotExpanded "}>
+      <div className={isExpanded ? "details" : "isNotExpanded"}>
         <div className="detailsLeft">
           <p><strong>Email: </strong>{humanClones.email}</p>
           <p><strong>Phone: </strong>{humanClones.phone}</p>
