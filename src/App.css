@@ -65,9 +65,9 @@ h1 {
   font-family: "Lato", sans-serif;
   border-top: 1.5px solid rgb(220, 185, 236);
   padding: 1rem;
-  max-height: 90px;
+  max-height: 95px;
   opacity: 1;
-  transition: max-height .33s cubic-bezier(.525, .66, .495,.5), opactiy .5s ease-in;
+  transition: max-height .33s cubic-bezier(.525, .66, .495,.5), opactiy .65s ease-in;
 }
 
 .detailsLeft {
@@ -79,3 +79,4 @@ h1 {
   width: 50%;
   margin-left: 1rem;
 }
+

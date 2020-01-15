@@ -1,8 +1,5 @@
 import React from "react";
-// import moment from "moment";
 import Collapsible from "./Collapsible";
-import { CSSTransition } from "react-transition-group";
-import { TransitionGroup } from "react-transition-group";
 
 class HumanCard extends React.Component {
   state = {

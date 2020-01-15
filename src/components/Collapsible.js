@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-import "../App.css";
 
 class Collapsible extends React.Component {
   render() {
