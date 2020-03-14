@@ -20,8 +20,8 @@ const HumanGroup = props => {
   // console.log("***Sorted Humans***", humanClones);
 
   return (
-    <div>
-      {humanClones.map(human => (
+    <div className="container">
+      {humanData.map(human => (
         <HumanCard key={human.email} humanClones={human} />
       ))}
     </div>

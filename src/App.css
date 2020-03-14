@@ -8,19 +8,34 @@
 
 body {
   background: rgba(225, 202, 225, 1);
-  width: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 1100px;
+  height: 300vh;
+  padding: 3rem;
+  background: rgba(255, 228, 225, 0.52);
 }
 
 .card {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-shrink: 1;
   align-items: center;
   margin-top: .75rem;
   margin-bottom: .75rem;
 }
 
 .card-body {
-  width: 33vw;
+  width: 500px;
   background: rgba(152, 179, 166, 1);
   display: flex;
   flex-direction: column;
@@ -56,6 +71,7 @@ h1 {
   margin-left: 2rem;
   border: 3px solid rgba(236, 185, 205, 1);
   border-radius: 50%;
+  box-shadow: 0px 2px 16px 0px rgb(230, 179, 206);
 }
 
 .isNotExpanded {
@@ -162,7 +178,9 @@ h1 {
 
   .details {
     flex-direction: column;
+    padding: 10px;
     max-height: 240px;
+    max-width: 80%;
   }
 
   .detailsRight {
