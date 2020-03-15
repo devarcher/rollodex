@@ -1,5 +1,6 @@
 import React from "react";
 import HumanGroup from "./components/HumanGroup";
+import { arrayMove } from 'react-sortable-hoc';
 
 import "./App.css";
 
@@ -39,6 +40,10 @@ class App extends React.Component {
     }
   }
 
+  onSortEnd = ({oldIndex, newIndex}) => {
+    this.setState({humans: arrayMove(this.state.humans, oldIndex, newIndex)})
+  }
+
   render() {
     return (
       <div>
@@ -46,7 +51,7 @@ class App extends React.Component {
           <div>LOADING HUMANS...</div>
         ) : (
           <div>
-            <HumanGroup humanData={this.state.humans} />
+            <HumanGroup humanData={this.state.humans} onSortEnd={this.onSortEnd} axis='xy' />
           </div>
         )}
       </div>

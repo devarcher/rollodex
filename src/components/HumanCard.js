@@ -14,7 +14,7 @@ class HumanCard extends React.Component {
   render() {
     const { humanClones } = this.props;
     const { isExpanded } = this.state;
-    console.log(humanClones);
+    // console.log(humanClones);
     return (
       <div>
         <div className="card">
